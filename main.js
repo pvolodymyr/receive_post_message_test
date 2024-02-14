@@ -8,8 +8,3 @@ iframe.addEventListener('load', function () {
 		token: 'some token',
 	});
 });
-
-window.postMessage({
-	message: 'token',
-	token: 'some token',
-});
