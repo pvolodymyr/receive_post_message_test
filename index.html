@@ -17,7 +17,7 @@
 				const accessToken =
 					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDgzMzc1MTMsImV4cCI6MjAyMzY5NzUxMywiaWF0IjoxNzA4MzM3NTEzLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.uCm4DSKIDxhqDO8y3uwb54mbnUfhBccvQTVRKJAGmXgtdOlqHZJ6KfhiTeUqgtUVIG5oMvWD_eTBOOLjMd1_ng';
 
-				iframe.contentWindow.postMessage({ accessToken });
+				iframe.contentWindow.postMessage({ accessToken }, '*');
 			});
 		</script>
 	</body>
