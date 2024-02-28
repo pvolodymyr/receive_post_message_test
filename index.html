@@ -4,12 +4,13 @@
 		<title>PostMessage Parent Page</title>
 	</head>
 	<body>
-		<h2>QA</h2>
+		<!-- <h2>QA</h2>
 		<iframe
 			id="iframe-qa"
 			src="https://dev.chaizfixd.pages.dev/?planId=4868602"
 			width="360"
-			height="340"
+			height="350"
+			frameborder="0"
 		></iframe>
 		<script>
 			const iframeQA = document.getElementById('iframe-qa');
@@ -23,14 +24,15 @@
 
 				iframeQA.contentWindow.postMessage({ accessToken }, '*');
 			});
-		</script>
+		</script> -->
 
-		<!-- <h2>UAT</h2>
+		<h2>UAT</h2>
 		<iframe
 			id="iframe-uat"
 			src="https://uat.chaizfixd.pages.dev/?planId=1301805"
 			width="360"
-			height="340"
+			height="350"
+			frameborder="0"
 		></iframe>
 		<script>
 			const iframeUat = document.getElementById('iframe-uat');
@@ -41,6 +43,6 @@
 
 				iframeUat.contentWindow.postMessage({ accessToken }, '*');
 			});
-		</script> -->
+		</script>
 	</body>
 </html>
