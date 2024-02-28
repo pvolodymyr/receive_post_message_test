@@ -8,8 +8,8 @@
 		<iframe
 			id="iframe-qa"
 			src="https://uat.chaizfixd.pages.dev/?planId=4868602"
-			width="600"
-			height="600"
+			width="450"
+			height="350"
 		></iframe>
 		<script>
 			const iframeQA = document.getElementById('iframe-qa');
@@ -25,16 +25,16 @@
 		<h2>UAT</h2>
 		<iframe
 			id="iframe-uat"
-			src="https://uat.chaizfixd.pages.dev/?planId=1430602"
-			width="600"
-			height="600"
+			src="https://uat.chaizfixd.pages.dev/?planId=1301805"
+			width="450"
+			height="350"
 		></iframe>
 		<script>
 			const iframeUat = document.getElementById('iframe-uat');
 
 			iframeUat.addEventListener('load', function () {
 				const accessToken =
-					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDgzMzc1MTMsImV4cCI6MjAyMzY5NzUxMywiaWF0IjoxNzA4MzM3NTEzLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.uCm4DSKIDxhqDO8y3uwb54mbnUfhBccvQTVRKJAGmXgtdOlqHZJ6KfhiTeUqgtUVIG5oMvWD_eTBOOLjMd1_ng';
+					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDc5MTQ2NjksImV4cCI6MjAyMzI3NDY2OSwiaWF0IjoxNzA3OTE0NjY5LCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.tD8Bl00iShNG-GEH2fbuHFEDXSheNwfB_IpNLWqPUfmPLnFLLZUfYfiJLmAm4WdZu9yzqlQ3YtXAla4vX9borQ';
 
 				iframeUat.contentWindow.postMessage({ accessToken }, '*');
 			});
