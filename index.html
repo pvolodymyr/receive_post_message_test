@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Receive post message test</title>
+		<title>PostMessage Parent Page</title>
 	</head>
 	<body>
 		<iframe
 			id="iframe"
-			src="https://dev.chaizfixd.pages.dev/?planId=1430602"
-			width="360px"
-			height="350px"
-			frameborder="0"
+			src="https://uat.chaizfixd.pages.dev/?planId=1430602"
+			width="600"
+			height="600"
 		></iframe>
 		<script>
 			const iframe = document.getElementById('iframe');
-			console.log('🚀 ~ iframe:', iframe);
 
-			iframe.addEventListener('load', () => {
-				console.log('🚀 ~ iframe.addEventListener ~ load:');
-				iframe.contentWindow.postMessage({
-					accessToken:
-						'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDc5MTQ2NjksImV4cCI6MjAyMzI3NDY2OSwiaWF0IjoxNzA3OTE0NjY5LCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.tD8Bl00iShNG-GEH2fbuHFEDXSheNwfB_IpNLWqPUfmPLnFLLZUfYfiJLmAm4WdZu9yzqlQ3YtXAla4vX9borQ',
-				});
+			iframe.addEventListener('load', function () {
+				const accessToken =
+					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDgzMzc1MTMsImV4cCI6MjAyMzY5NzUxMywiaWF0IjoxNzA4MzM3NTEzLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.uCm4DSKIDxhqDO8y3uwb54mbnUfhBccvQTVRKJAGmXgtdOlqHZJ6KfhiTeUqgtUVIG5oMvWD_eTBOOLjMd1_ng';
 
-				window.postMessage({
-					accessToken:
-						'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDc5MTQ2NjksImV4cCI6MjAyMzI3NDY2OSwiaWF0IjoxNzA3OTE0NjY5LCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.tD8Bl00iShNG-GEH2fbuHFEDXSheNwfB_IpNLWqPUfmPLnFLLZUfYfiJLmAm4WdZu9yzqlQ3YtXAla4vX9borQ',
-				});
+				iframe.contentWindow.postMessage({ accessToken }, '*');
 			});
 		</script>
 	</body>
