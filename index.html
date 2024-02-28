@@ -4,20 +4,39 @@
 		<title>PostMessage Parent Page</title>
 	</head>
 	<body>
+		<h2>QA</h2>
 		<iframe
-			id="iframe"
+			id="iframe-qa"
+			src="https://uat.chaizfixd.pages.dev/?planId=4868602"
+			width="600"
+			height="600"
+		></iframe>
+		<script>
+			const iframeQA = document.getElementById('iframe-qa');
+
+			iframeQA.addEventListener('load', function () {
+				const accessToken =
+					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDczODk2MjEsImV4cCI6MjAyMjc0OTYyMSwiaWF0IjoxNzA3Mzg5NjIxLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.Es1cx4UaHQeZKNTN72o3aG1Yec_hbsbGVQZQznU11sq-kTX4pmqLmNG01xW8X7gsS5ra9jItqCTvjdGdwX-zow';
+
+				iframeQA.contentWindow.postMessage({ accessToken }, '*');
+			});
+		</script>
+
+		<h2>UAT</h2>
+		<iframe
+			id="iframe-uat"
 			src="https://uat.chaizfixd.pages.dev/?planId=1430602"
 			width="600"
 			height="600"
 		></iframe>
 		<script>
-			const iframe = document.getElementById('iframe');
+			const iframeUat = document.getElementById('iframe-uat');
 
-			iframe.addEventListener('load', function () {
+			iframeUat.addEventListener('load', function () {
 				const accessToken =
 					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDgzMzc1MTMsImV4cCI6MjAyMzY5NzUxMywiaWF0IjoxNzA4MzM3NTEzLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.uCm4DSKIDxhqDO8y3uwb54mbnUfhBccvQTVRKJAGmXgtdOlqHZJ6KfhiTeUqgtUVIG5oMvWD_eTBOOLjMd1_ng';
 
-				iframe.contentWindow.postMessage({ accessToken }, '*');
+				iframeUat.contentWindow.postMessage({ accessToken }, '*');
 			});
 		</script>
 	</body>
