@@ -13,8 +13,11 @@
 		></iframe>
 		<script>
 			const iframeQA = document.getElementById('iframe-qa');
+			console.log('🚀 ~ iframeQA:', !!iframeQA);
 
 			iframeQA.addEventListener('load', function () {
+				console.log('🚀 ~ iframeQA LOADED');
+
 				const accessToken =
 					'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJGaXhkIiwicm9sZSI6IlBhcnRuZXIiLCJ1bmlxdWVfbmFtZSI6IkZpeGQiLCJwYXJ0bmVyIjoyLCJuYmYiOjE3MDczODk2MjEsImV4cCI6MjAyMjc0OTYyMSwiaWF0IjoxNzA3Mzg5NjIxLCJpc3MiOiJJc3N1ZXIiLCJhdWQiOiJBdWRpZW5jZSJ9.Es1cx4UaHQeZKNTN72o3aG1Yec_hbsbGVQZQznU11sq-kTX4pmqLmNG01xW8X7gsS5ra9jItqCTvjdGdwX-zow';
 
