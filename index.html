@@ -2,9 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/Favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Warranty search</title>
+		<title>Warranty search test</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -13,64 +12,21 @@
 		/>
 
 		<script>
-			window.chaizPlanSearchConfig = {
-				providers: [
-					'Royal',
-					'Omega',
-					'Service Contract',
-					'carguard',
-					'naac',
-					'caps',
-				],
-				targetElementId: 'app',
-				searchData: {
-					make: 'MERCEDES-BENZ',
-					model: 'GLA',
-					year: '2020',
-					state: 'NJ',
-					mileage: '1212',
-				},
-				coverageLevel: 'basic_plus',
-				showProviderInfo: true,
-				showCardShadow: true,
-
-				callbacks: {
-					onRedirect: (planData) => {
-						console.log('🚀 ~ planData:', planData);
-					},
-					onLoading: (isLoading) => {
-						console.log('🚀 ~ isLoading:', isLoading);
-					},
-					onError: (error) => {
-						console.log('🚀 ~ error:', error);
-					},
-				},
+			window.chaizProviderInfoConfig = {
+				hostElementId: 'app',
 			};
 		</script>
-		<script src="https://warranty-search.pages.dev/warranties-search.js"></script>
+		<script src="https://provider-info.pages.dev/omega.js"></script>
 	</head>
-	<body style="background-color: #f5f5f5">
-		<!-- <div
+	<body>
+		<div
 			id="app"
 			style="
 				max-width: 860px;
 				margin: 0 auto;
 				padding: 25px;
-				text-align: center;
 				font-family: Poppins;
 			"
-		></div> -->
-
-		<script>
-			console.time('node_injection');
-
-			const node = document.createElement('div');
-			node.setAttribute('id', 'app');
-
-			setTimeout(() => {
-				document.body.append(node);
-				console.timeLog('node_injection');
-			}, 15000);
-		</script>
+		></div>
 	</body>
 </html>
