@@ -12,17 +12,40 @@
 		/>
 
 		<script>
-			window.chaizSearchWidgetConfig = {
+			window.chaizWarrantySearchConfig = {
 				targetElementId: 'app',
+
+				providers: [],
+
+				numberOfProviders: 3,
+				searchData: {
+					vin: 'WDCTG4EB3LU024973',
+					make: '',
+					model: '',
+					year: '2020',
+					state: 'NJ',
+					mileage: '1212',
+				},
+				coverageLevel: 'basic_plus',
+				showProviderInfo: true,
+				showCardShadow: true,
+
+				callbacks: {
+					onRedirect: (planData) => {
+						console.log('🚀 ~ planData:', planData);
+					},
+					onLoading: (isLoading) => {
+						console.log('🚀 ~ isLoading:', isLoading);
+					},
+					onError: (error) => {
+						console.log('🚀 ~ error:', error);
+					},
+				},
 			};
 		</script>
-		<script src="https://search-widget.uat.chaiz.com/nerdwallet-widget.js"></script>
+		<script src="https://warranty-search.chaiz.com/initialize.js"></script>
 	</head>
 	<body>
-		<div
-			id="app"
-			style="margin: 0 auto; padding: 25px; font-family: Poppins"
-		></div>
 		<h1>Compare and buy breakdown protection from top providers</h1>
 		<p>
 			Chaiz is an online marketplace designed to help consumers compare and buy
@@ -78,12 +101,22 @@
 			warranty needs​ (Several.com)​.
 		</p>
 
+		<div
+			id="app"
+			style="
+				margin: 0 auto;
+				padding: 25px;
+				font-family: Poppins;
+				max-width: 700px;
+			"
+		></div>
+
 		<!-- <script>
-      setTimeout(() => {
-        const element = document.createElement('div')
-        element.id = 'app'
-        document.body.append(ele)
-      }, 15000)
-    </script> -->
+			setTimeout(() => {
+				const element = document.createElement('div');
+				element.id = 'app';
+				document.body.append(element);
+			}, 15000);
+		</script> -->
 	</body>
 </html>
