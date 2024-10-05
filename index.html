@@ -12,40 +12,117 @@
 		/>
 
 		<script>
-			window.chaizWarrantySearchConfig = {
+			window.chaizProviderListConfig = {
+				providers: ['CarGuard', 'NAAC', 'CAPS', 'Service Contract', 'omega'],
 				targetElementId: 'app',
-
-				providers: [],
-
-				numberOfProviders: 3,
-				searchData: {
-					vin: 'WDCTG4EB3LU024973',
-					make: '',
-					model: '',
-					year: '2020',
-					state: 'NJ',
-					mileage: '1212',
-				},
-				coverageLevel: 'basic_plus',
-				showProviderInfo: true,
-				showCardShadow: true,
-
-				callbacks: {
-					onRedirect: (planData) => {
-						console.log('🚀 ~ planData:', planData);
-					},
-					onLoading: (isLoading) => {
-						console.log('🚀 ~ isLoading:', isLoading);
-					},
-					onError: (error) => {
-						console.log('🚀 ~ error:', error);
-					},
-				},
 			};
 		</script>
-		<script src="https://warranty-search.chaiz.com/initialize.js"></script>
+		<script src="https://providers-list.pages.dev/providers-list-initialization.js"></script>
 	</head>
 	<body>
+		<div
+			id="app"
+			style="
+				margin: 0 auto;
+				padding: 25px;
+				font-family: Poppins;
+				max-width: 700px;
+			"
+		></div>
+		<section class="section bg__lightgray">
+			<div class="containerwide w-container">
+				<div class="section-_title">
+					<h2 class="text_center section_heading">Your protection options</h2>
+					<div class="sectionsubtitle">
+						Warranties, insurance, vehicle service contracts, breakdown
+						protection? What does it all mean and what do you need right now?
+					</div>
+				</div>
+				<div class="div-block-7">
+					<div class="displayrow">
+						<img
+							src="https://cdn.prod.website-files.com/62f3a95300236f13d26a4e0e/64774386906d4359fa605426_factory-warranty.svg"
+							loading="lazy"
+							alt=""
+							class="image-4"
+						/>
+						<div id="w-node-bdf46908-267d-b9fc-5772-37e22b032e3f-bd82e8ae">
+							<h3>Factory warranty</h3>
+							<p>
+								A factory warranty is provided by the vehicle manufacturer on
+								purchase of a new car and covers certain repairs or replacements
+								for about 2-4 years or a certain mileage. Typically, factory
+								warranties only cover defects in materials or workmanship, and
+								do not cover wear and tear or routine maintenance. Once the
+								factory warranty expires, you are out of protection.
+							</p>
+						</div>
+					</div>
+					<div class="displayrow">
+						<img
+							src="https://cdn.prod.website-files.com/62f3a95300236f13d26a4e0e/647872b2f6a90263cd35ea8a_img-2.svg"
+							loading="lazy"
+							alt=""
+							class="image-4"
+						/>
+						<div id="w-node-_791ec7bc-414b-cdc8-9914-950cbd6920b9-bd82e8ae">
+							<h3>Vehicle Service Contracts</h3>
+							<p>
+								<strong
+									>Vehicle Service Contracts (VSC), also known as "Extended
+									warranties", "Extended car warranties", or "Mechanical
+									breakdown protection", provide coverage for certain repairs
+									after the original factory warranty has expired. </strong
+								><br />If you need your car to go to work or manage your life,
+								they are often the best way to protect yourself from sudden high
+								costs a faulty part can create. <br />There are vast differences
+								in coverage, monthly price and services included. Some plans
+								offer additional benefits such as roadside assistance or rental
+								car coverage. Thus, we recommend comparing and reading the
+								contract before purchasing a plan to avoid any disappointment.
+								Naturally, we believe that Chaiz is the best way to do this.
+							</p>
+						</div>
+					</div>
+					<div class="displayrow">
+						<img
+							src="https://cdn.prod.website-files.com/62f3a95300236f13d26a4e0e/6481a968387f691d7bb99c1f_crashed-car.svg"
+							loading="lazy"
+							alt=""
+							class="image-4"
+						/>
+						<div id="w-node-_7cd603b9-0886-df3b-f098-3c33d5a7228e-bd82e8ae">
+							<h3>Car insurance</h3>
+							<p>
+								Car insurance covers the cost of damage or injuries resulting
+								from accidents, theft, or other unforeseen event and is a legal
+								requirement in 49 out of 50 states.<br /><strong
+									>Chaiz does not sell car insurance.</strong
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="div-block-10">
+					<h4>Is it right for you?</h4>
+					<p>
+						To decide whether you need a VSC/extended car warranty, depends on
+						your personal need for your car. A mechanical breakdown is 50x more
+						likely than an accident and once the factory warranty is over, any
+						mechanical issue has to be paid out of your own pockets. So ask
+						yourself: "Can I pay for a $1000 repair without issues?". Repairs
+						can easily get more expensive than that and we see a VSC also as a
+						great budgeting and financial planning tool.<br />
+					</p>
+				</div>
+				<div class="centerchildren">
+					<div class="spacer_s"></div>
+					<a href="#" class="link-block w-inline-block"
+						><div>Find the right warranty for you</div></a
+					>
+				</div>
+			</div>
+		</section>
 		<h1>Compare and buy breakdown protection from top providers</h1>
 		<p>
 			Chaiz is an online marketplace designed to help consumers compare and buy
@@ -100,16 +177,6 @@
 			customers in this state will need to look elsewhere for their extended
 			warranty needs​ (Several.com)​.
 		</p>
-
-		<div
-			id="app"
-			style="
-				margin: 0 auto;
-				padding: 25px;
-				font-family: Poppins;
-				max-width: 700px;
-			"
-		></div>
 
 		<!-- <script>
 			setTimeout(() => {
