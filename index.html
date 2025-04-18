@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
+		<title>Chaiz Payment Iframe</title>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Just test some stuff in here</title>
+		<script src="https://dev-payment-iframe.pages.dev/copart/payment-iframe-init.js"></script>
+		<script src="./index.js"></script>
+		<link rel="stylesheet" href="./styles.css" />
 	</head>
-	<script src="https://query-params-interceptor.pages.dev/initialize.js"></script>
-	<body>
-		<script>
-			window.addEventListener('message', function (event) {
-				// In production, verify the origin
-				// if (event.origin !== "expected-origin") return;
 
-				console.log('iframe received data:', event.data);
-			});
-		</script>
+	<body>
+		<div id="paymentIframeTargetElement" style="height: 400px"></div>
 	</body>
 </html>
